@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jQuery Custom Social Buttons Plugin</title>
+<link rel='stylesheet' href='css/sample.css' type='text/css' media='all'/>
+</head>
+<body>
+
+<ul class="social_buttons">
+        <li class="button">
+                <a class="anchor" data-service="twitter" data-url="http://classmethod.jp" data-title="クラスメソッド株式会社｜http://classmethod.jp" target="_blank" href="#">
+                        <span class="icon">twitter</span>
+                        <span class="count">0</span>
+                </a>
+        </li>
+        <li class="button">
+                <a class="anchor" data-service="facebook" data-url="http://classmethod.jp" data-title="クラスメソッド株式会社" target="_blank" href="#">
+                        <span class="icon">facebook</span>
+                        <span class="count">0</span>
+                </a>
+        </li>
+        <li class="button">
+                <a class="anchor" data-service="hatena" data-url="http://design.classmethod.jp" data-title="クラスメソッド株式会社" target="_blank" href="#">
+                        <span class="icon">hatena</span>
+                        <span class="count">0</span>
+                </a>
+        </li>
+</ul>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.socialbuttons.js"></script>
+<script type="text/javascript">
+        $(function(){
+                var $social_buttons = $(".social_buttons");
+                $social_buttons.customSocialButtons();
+        });
+</script>
+</body>
+</html>
