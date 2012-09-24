@@ -11,9 +11,9 @@ body {
 }
 /* line 19, ../scss/sample.scss */
 .social_buttons .button a {
-  overflow: hidden;
   display: block;
   color: #333;
+  text-decoration: none;
 }
 /* line 27, ../scss/sample.scss */
 .social_buttons .icon {
@@ -30,13 +30,50 @@ body {
   display: block;
   padding: 3px 5px;
   height: 12px;
+  border: 1px solid #ccc;
   font-size: 80%;
   font-weight: bold;
   line-height: 100%;
+  background: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
 }
-
-/* line 53, ../scss/sample.scss */
-.facebook .icon {
+/* line 56, ../scss/sample.scss */
+.social_buttons .count:hover {
+  border: 1px solid #aaa;
+}
+/* line 60, ../scss/sample.scss */
+.social_buttons .count::after {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: 5px;
+  width: 0;
+  height: 0;
+  border-left: none;
+  border-right: 4px solid #ccc;
+  border-bottom: 4px solid transparent;
+  border-top: 4px solid transparent;
+}
+/* line 74, ../scss/sample.scss */
+.social_buttons .count::before {
+  content: "";
+  position: absolute;
+  left: -3px;
+  top: 6px;
+  width: 0;
+  height: 0;
+  border-left: none;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid transparent;
+  z-index: 100;
+}
+/* line 93, ../scss/sample.scss */
+.social_buttons .facebook .icon {
   position: relative;
   margin: 0 5px 0 0;
   padding: 3px 4px 3px 20px;
@@ -50,46 +87,13 @@ body {
   border-radius: 3px;
   text-shadow: 1px 1px 0 white;
 }
-/* line 67, ../scss/sample.scss */
-.facebook a:hover .icon {
+/* line 107, ../scss/sample.scss */
+.social_buttons .facebook .icon:hover {
   border: 1px solid #bbb;
   background-color: #ddd;
 }
-/* line 74, ../scss/sample.scss */
-.facebook .count {
-  border-radius: 3px;
-  border: 1px solid #ccc;
-}
-/* line 79, ../scss/sample.scss */
-.facebook .count::after {
-  content: "";
-  position: absolute;
-  left: -4px;
-  top: 5px;
-  width: 0;
-  height: 0;
-  border-left: none;
-  border-right: 4px solid #ccc;
-  border-bottom: 4px solid transparent;
-  border-top: 4px solid transparent;
-}
-/* line 93, ../scss/sample.scss */
-.facebook .count::before {
-  content: "";
-  position: absolute;
-  left: -3px;
-  top: 6px;
-  width: 0;
-  height: 0;
-  border-left: none;
-  border-right: 3px solid #fff;
-  border-bottom: 3px solid transparent;
-  border-top: 3px solid transparent;
-  z-index: 100;
-}
-
-/* line 114, ../scss/sample.scss */
-.twitter .icon {
+/* line 120, ../scss/sample.scss */
+.social_buttons .twitter .icon {
   position: relative;
   margin: 0 5px 0 0;
   padding: 3px 5px 3px 20px;
@@ -103,46 +107,13 @@ body {
   border-radius: 3px;
   text-shadow: 1px 1px 0 white;
 }
-/* line 128, ../scss/sample.scss */
-.twitter a:hover .icon {
+/* line 134, ../scss/sample.scss */
+.social_buttons .twitter .icon:hover {
   border: 1px solid #bbb;
   background-color: #ddd;
 }
-/* line 135, ../scss/sample.scss */
-.twitter .count {
-  border-radius: 3px;
-  border: 1px solid #ccc;
-}
-/* line 140, ../scss/sample.scss */
-.twitter .count::after {
-  content: "";
-  position: absolute;
-  left: -4px;
-  top: 5px;
-  width: 0;
-  height: 0;
-  border-left: none;
-  border-right: 4px solid #ccc;
-  border-bottom: 4px solid transparent;
-  border-top: 4px solid transparent;
-}
-/* line 154, ../scss/sample.scss */
-.twitter .count::before {
-  content: "";
-  position: absolute;
-  left: -3px;
-  top: 6px;
-  width: 0;
-  height: 0;
-  border-left: none;
-  border-right: 3px solid #fff;
-  border-bottom: 3px solid transparent;
-  border-top: 3px solid transparent;
-  z-index: 100;
-}
-
-/* line 175, ../scss/sample.scss */
-.hatena .icon {
+/* line 145, ../scss/sample.scss */
+.social_buttons .hatena .icon {
   position: relative;
   margin: 0 5px 0 0;
   padding: 3px 10px 3px 10px;
@@ -157,40 +128,8 @@ body {
   border-radius: 3px;
   text-shadow: 1px 1px 0 #2c6ebd;
 }
-/* line 191, ../scss/sample.scss */
-.hatena a:hover .icon {
+/* line 161, ../scss/sample.scss */
+.social_buttons .hatena .icon:hover {
   border: 1px solid #2c6ebd;
   background-color: #2660a5;
-}
-/* line 198, ../scss/sample.scss */
-.hatena .count {
-  border-radius: 3px;
-  border: 1px solid #ccc;
-}
-/* line 203, ../scss/sample.scss */
-.hatena .count::after {
-  content: "";
-  position: absolute;
-  left: -4px;
-  top: 5px;
-  width: 0;
-  height: 0;
-  border-left: none;
-  border-right: 4px solid #ccc;
-  border-bottom: 4px solid transparent;
-  border-top: 4px solid transparent;
-}
-/* line 217, ../scss/sample.scss */
-.hatena .count::before {
-  content: "";
-  position: absolute;
-  left: -3px;
-  top: 6px;
-  width: 0;
-  height: 0;
-  border-left: none;
-  border-right: 3px solid #fff;
-  border-bottom: 3px solid transparent;
-  border-top: 3px solid transparent;
-  z-index: 100;
 }

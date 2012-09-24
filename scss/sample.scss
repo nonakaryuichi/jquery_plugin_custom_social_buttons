@@ -17,10 +17,10 @@ body
 
         .button a
         {
-                overflow   : hidden;
                 display    : block;
 
                 color      : #333;
+                text-decoration : none;
         }
 
         .icon
@@ -41,11 +41,50 @@ body
                 padding    : 3px 5px;
                 height     : 12px;
 
+                border     : 1px solid #ccc;
+
+
                 font-size  : 80%;
                 font-weight: bold;
                 line-height: 100%;
 
                 background : #fff;
+
+                @include border-radius(3px);
+        }
+        .count:hover
+        {
+                border     : 1px solid #aaa; 
+        }
+        .count::after
+        {
+                content    : "";
+                position   : absolute;
+                left       : -4px;
+                top        : 5px;
+                width      : 0;
+                height     : 0;
+
+                border-left  : none;
+                border-right : 4px solid #ccc;
+                border-bottom: 4px solid transparent;
+                border-top   : 4px solid transparent;
+        }
+        .count::before
+        {
+                content    : "";
+                position   : absolute;
+                left       : -3px;
+                top        : 6px;
+                width      : 0;
+                height     : 0;
+
+                border-left  : none;
+                border-right : 3px solid #fff;
+                border-bottom: 3px solid transparent;
+                border-top   : 3px solid transparent;
+
+                z-index    : 100;
         }
 
         .facebook
@@ -64,48 +103,14 @@ body
                         @include border-radius( 3px );
                         @include text-shadow( 1px 1px 0 #fff );
                 }
-                a:hover .icon
+                .icon:hover
                 {
                         border     : 1px solid #bbb;
 
                         background-color : #ddd;
                 }
 
-                .count
-                {
-                        border-radius : 3px;
-                        border     : 1px solid #ccc;
-                }
-                .count::after
-                {
-                        content    : "";
-                        position   : absolute;
-                        left       : -4px;
-                        top        : 5px;
-                        width      : 0;
-                        height     : 0;
-
-                        border-left  : none;
-                        border-right : 4px solid #ccc;
-                        border-bottom: 4px solid transparent;
-                        border-top   : 4px solid transparent;
-                }
-                .count::before
-                {
-                        content    : "";
-                        position   : absolute;
-                        left       : -3px;
-                        top        : 6px;
-                        width      : 0;
-                        height     : 0;
-
-                        border-left  : none;
-                        border-right : 3px solid #fff;
-                        border-bottom: 3px solid transparent;
-                        border-top   : 3px solid transparent;
-
-                        z-index    : 100;
-                }
+                
         }
 
 
@@ -125,47 +130,11 @@ body
                         @include border-radius( 3px );
                         @include text-shadow( 1px 1px 0 #fff );
                 }
-                a:hover .icon
+                .icon:hover
                 {
                         border     : 1px solid #bbb;
 
                         background-color : #ddd;
-                }
-
-                .count
-                {
-                        border-radius : 3px;
-                        border     : 1px solid #ccc;
-                }
-                .count::after
-                {
-                        content    : "";
-                        position   : absolute;
-                        left       : -4px;
-                        top        : 5px;
-                        width      : 0;
-                        height     : 0;
-
-                        border-left  : none;
-                        border-right : 4px solid #ccc;
-                        border-bottom: 4px solid transparent;
-                        border-top   : 4px solid transparent;
-                }
-                .count::before
-                {
-                        content    : "";
-                        position   : absolute;
-                        left       : -3px;
-                        top        : 6px;
-                        width      : 0;
-                        height     : 0;
-
-                        border-left  : none;
-                        border-right : 3px solid #fff;
-                        border-bottom: 3px solid transparent;
-                        border-top   : 3px solid transparent;
-
-                        z-index    : 100;
                 }
         }
 
@@ -188,47 +157,11 @@ body
                         @include border-radius( 3px );
                         @include text-shadow( 1px 1px 0 #2c6ebd );
                 }
-                a:hover .icon
+                .icon:hover
                 {
                         border     : 1px solid #2c6ebd;
 
                         background-color : #2660a5;
-                }
-
-                .count
-                {
-                        border-radius : 3px;
-                        border     : 1px solid #ccc;
-                }
-                .count::after
-                {
-                        content    : "";
-                        position   : absolute;
-                        left       : -4px;
-                        top        : 5px;
-                        width      : 0;
-                        height     : 0;
-
-                        border-left  : none;
-                        border-right : 4px solid #ccc;
-                        border-bottom: 4px solid transparent;
-                        border-top   : 4px solid transparent;
-                }
-                .count::before
-                {
-                        content    : "";
-                        position   : absolute;
-                        left       : -3px;
-                        top        : 6px;
-                        width      : 0;
-                        height     : 0;
-
-                        border-left  : none;
-                        border-right : 3px solid #fff;
-                        border-bottom: 3px solid transparent;
-                        border-top   : 3px solid transparent;
-
-                        z-index    : 100;
                 }
         }
 
